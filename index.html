@@ -1,0 +1,141 @@
+<html lang="ru" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="dist/css/style.css">
+	<link rel="icon" href="img/favicon.png">
+</head>
+<body>
+	<div class="body-wrap">
+		<button class="back-to-top hidden">Наверх</button>
+		<header class="site-header">
+			<div class="wrapper">
+				<div class="header-title">
+					<div>
+						<h1>
+							Что такое <span class="svg">SVG</span> и как его готовить
+						</h1>
+					</div>
+				</div>
+				<div class="header-nav">
+					<div>
+						<h2>
+							Оглавление:
+						</h2>
+					</div>
+					<div>	
+						<nav class="nav">
+							<li><a href="#whatIs">Что такое <span class="svg">SVG</span></a></li>
+							<li><a href="#examples">Примеры <span class="svg">SVG</span></a></li>
+							<li><a href="#prosCons">Плюсы и минусы <span class="svg">SVG</span></a></li>
+							<li><a href="#structure">Структура <span class="svg">SVG</span></a></li>
+							<li><a href="#conclusion">Заключение</a></li>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="whatIs" id="whatIs">
+				<div class="wrapper">
+					<div>
+						<h2>Что такое SVG</h2>
+					</div>
+					<div>
+						<p>
+							SVG (от англ. Scalable Vector Graphics — масштабируемая векторная графика) — язык разметки масштабируемой векторной графики, созданный Консорциумом Всемирной паутины (W3C) и входящий в подмножество расширяемого языка разметки XML, предназначен для описания двумерной векторной и смешанной векторно/растровой графики в формате XML. Поддерживает как неподвижную, так и анимированную интерактивную графику — или, в иных терминах, декларативную и скриптовую. Не поддерживает описания трёхмерных объектов (не путать с имитацией трёхмерности путём светотени).
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="examples" id="examples">
+				<div class="wrapper">
+					<div>
+						<h2>Примеры SVG</h2>
+					</div>
+					<div class="inline">
+						<div>
+							<svg height="100" width="100"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"><title>I'm a red circle</title></circle>Sorry, your browser does not support inline SVG.</svg>
+						</div>
+						<div>
+							<svg width="400" height="110"><rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"><title>I'm a blue rectangle</title></rect>Sorry, your browser does not support inline SVG.  </svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="prosCons" id="prosCons">
+				<div class="wrapper">
+					<div>
+						<h2>Плюсы и минусы SVG</h2>
+					</div>
+					<div>
+						<h3>Достоинства формата</h3>
+						<ul>
+							<li><p>Текстовый формат — файлы SVG можно читать и редактировать (при наличии некоторых навыков) при помощи обычных текстовых редакторов. При просмотре документов, содержащих SVG-графику, имеется доступ к просмотру кода просматриваемого файла и возможность сохранения всего документа. Кроме того, SVG-файлы обычно получаются меньше по размеру, чем сравнимые по качеству изображения в форматах JPEG или GIF, а также хорошо поддаются сжатию.</p></li>
+							<li><p>Масштабируемость — SVG является векторным форматом. Существует возможность увеличить любую часть изображения SVG без потери качества. Дополнительно, к элементам SVG-документа возможно применять фильтры — специальные модификаторы для создания эффектов, подобных применяемым при обработке растровых изображений (размытие, выдавливание, сложные системы трансформации и др.). В тексте SVG-кода фильтры описываются тегами, визуализацию которых обеспечивает средство просмотра, что не влияет на размер исходного файла, обеспечивая при этом необходимую иллюстративную выразительность.</p></li>
+							<li>Широко доступно использование растровой графики в SVG-документах. Имеется возможность вставлять элементы с изображениями в форматах PNG, GIF или JPG.</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Недостатки формата</h3>
+						<ul>
+							<li>Полностью отсутствует поддержка трёхмерной графики</li>
+							<li>SVG наследует все недостатки XML, такие как большой размер файла (впрочем, последний компенсируется существованием сжатого формата SVGZ, однако его использование на данный момент затруднено, так как SVGZ не имеет собственного MIME-типа).</li>
+							<li>Сложность использования в крупных картографических приложениях из-за того, что для правильного отображения маленькой части изображения документ необходимо прочитать целиком.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="structure" id="structure">
+				<div class="wrapper">
+					<div>
+						<h2>Структура SVG</h2>
+					</div>
+					<div>
+						<div>
+							<figure>
+								<figcaption>Первая строка — стандартный XML-заголовок, объявление (англ. XML declaration), указывающее версию XML (version) (обычно «1.0») и кодировку символов (encoding):</figcaption>
+								<img src="dist/images/pic1.png" class="responsive">
+							</figure>
+						</div>
+						<div>
+							<figure>
+								<figcaption>Во второй и третьей строках должен располагаться заголовок DOCTYPE, определяющий тип документа (англ. Document Type Definitions) DTD:</figcaption>
+								<img src="dist/images/pic2.png" class="responsive">
+							</figure>
+						</div>
+						<div>
+							<figure>
+								<figcaption>В четвёртой строке размещается корневой элемент документа с указанием пространства имён SVG.</figcaption>
+								<img src="dist/images/pic3.png" class="responsive">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="conclusion" id="conclusion">
+				<div class="wrapper">
+					<div>
+						<h2>Использованные материалы</h2>
+						<ol>
+							<li><a href="https://ru.wikipedia.org/wiki/SVG">https://ru.wikipedia.org/wiki/SVG</a></li>
+						</ol>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<div class="wrapper">
+				<div>
+					2022.
+				</div>
+				<div>
+					<div class="date"></div>
+				</div>
+			</div>
+		</footer>
+    </div>
+    <script src="dist/js/main.js"></script>
+</body>
+</html>
